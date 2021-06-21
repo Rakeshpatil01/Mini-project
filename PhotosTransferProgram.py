@@ -14,6 +14,8 @@ count_ofcurr_path=[]
 
 def year(file):
 	Mod_time= time.ctime(os.path.getctime(file))
+	#The mtime refers to last time the file's contents were changed. 
+	#The ctime indicates the last time the inode was altered
 	split_list=Mod_time.split()
 	count_ofyears.append(split_list[4])
 	return split_list[4]
